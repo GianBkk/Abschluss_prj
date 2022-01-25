@@ -12,9 +12,9 @@ export class DataController {
         return await this.dataService.getAllByPrinterDESC(printerId);
     }
 
-    @Get('/all/:id')
-    async getAllByPrinterASC(@Param('id') printerId : string): Promise<Data[]> {
-        return await this.dataService.getAllByPrinterASC(printerId);
+    @Get('/printers')
+    async getAllWithPrinter(): Promise<Data[]> {
+        return await this.dataService.getAllWithPrinter();
     }
 
     @Get(':id')

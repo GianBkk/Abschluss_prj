@@ -14,8 +14,9 @@ services:
       - POSTGRES_USER=${DATABASE_USER}
       - POSTGRES_PASS=${DATABASE_PASSWORD}
       - POSTGRES_DB=${DB_NAME}
+      - API_PORT=${API_PORT}
     ports:
-      - "3000:3000"
+      - "8000:8000"
 
   db:
     image: postgres

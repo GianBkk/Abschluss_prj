@@ -23,7 +23,7 @@ export class DataService {
         }
     }
 
-    async getAllByPrinterASC(printerId: string): Promise<Data[]> {
+    async getAllWithPrinter(): Promise<Data[]> {
         try {
             let data = []
             let printer = await this.printerRepo.find();
@@ -34,9 +34,6 @@ export class DataService {
                 data.push(output)
             }
             return data
-            
-
-
         } catch (error) {
             return error;
         }
@@ -70,8 +67,8 @@ export class DataService {
 
 
 
-
-    @Cron('*/1 6-19 * * 1-5')
+    // */10 6-19 * * 1-5
+    @Cron('*/5 6-19 * * 1-5')
     async handleCron() {
         let printer = await this.printerRepo.find();
         for (let index = 0; index < printer.length; index++) {
@@ -92,8 +89,8 @@ export class DataService {
             })
         }
   }
-
-  @Cron('0 19 * * 7')
+  //0 19 * * 7
+  @Cron('*/30 * * * *')
     async deleteData() : Promise<Data[]>{
         try {
             const data = await this.dataRepo.find();
