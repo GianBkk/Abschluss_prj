@@ -24,7 +24,7 @@ const Navbar = () => {
                       <Link to='/' className='nav-link active' aria-current='page'>Home</Link>
                   </li>
                   <li className='nav-item'>
-                      <a className='nav-link' href='#'>HTL</a>
+                      <a className='nav-link' href='http://www.htlsaalfelden.at/'>HTL</a>
                   </li>
                   <li className='nav-item'>
                     <Link to='/drucker' className='nav-link active' aria-current='page'>Drucker</Link>
