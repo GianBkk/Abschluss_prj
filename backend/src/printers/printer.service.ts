@@ -4,11 +4,13 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Printer } from '../models/printer.entity';
 import { Repository } from 'typeorm';
 import { CreatePrinterDto } from './dtos/createPrinter.dto';
+import { DataService } from '../data/data.service';
 
 
 @Injectable()
 export class PrinterService {
-    constructor(@InjectRepository(Printer) private printerRepo: Repository<Printer>) {}
+    constructor(@InjectRepository(Printer) private printerRepo: Repository<Printer>,
+        private dataservice: DataService) {}
 
     async getAll(): Promise<Printer[]> {
         return await this.printerRepo.find();
@@ -26,7 +28,9 @@ export class PrinterService {
     async addPrinter(dto: CreatePrinterDto) : Promise<Printer> {
         try {
             const newPrinter = await this.printerRepo.create(dto);
-            return this.printerRepo.save(newPrinter);
+            const prt = await this.printerRepo.save(newPrinter);
+            this.dataservice.handleCron();
+            return prt
         } catch (error) {
             return error;
         }  
