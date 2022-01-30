@@ -30,8 +30,10 @@ export class DataService {
             for (let index = 0; index < printer.length; index++) {
                 let obj = printer[index];
                 let infoObj = await this.getOneByPrinter(printer[index].id);
-                const output = merge(obj, infoObj);
-                data.push(output)
+                if(infoObj){
+                    const output = merge(obj, infoObj);
+                    data.push(output)
+                } 
             }
             return data
         } catch (error) {
@@ -44,7 +46,7 @@ export class DataService {
             return await this.dataRepo.createQueryBuilder("data")
                 .where("data.printerid = :id", { id : printerId })
                 .orderBy("data.created_at", "DESC")
-                .getOneOrFail();
+                .getOne();
         } catch (error) {
             return error;
         }
@@ -68,7 +70,7 @@ export class DataService {
 
 
     // */10 6-19 * * 1-5
-    @Cron('*/5 6-19 * * 1-5')
+    @Cron('*/5 6-19 * * *')
     async handleCron() {
         let printer = await this.printerRepo.find();
         for (let index = 0; index < printer.length; index++) {

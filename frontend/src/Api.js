@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const fetchData = () => {
     console.log('fetch Data...');
-    return axios.get('https://61f58cf962f1e300173c41c9.mockapi.io/api/v1/todos/todos')
+    return axios.get('http://localhost:8000/data/printers')
         .then(res => res.data)
         .catch(err => console.log(err))
 }
