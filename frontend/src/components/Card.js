@@ -84,7 +84,9 @@ const Card = ({resource}) => {
             <div className='container-fluid text-center'>
                     <h1 className='h2 mb-2 mt-5'>Dashboard</h1>
                     <Link to='/drucker'>
-                        <button className='btn btn-primary mt-5' type='button'>Add Printer</button>
+                        <button className='btn btn-primary mt-5' type='button'>
+                            Add Printer
+                        </button>
                     </Link>
                     <h1 className='h6 pt-5 mt-5'>Nothing to show!</h1>                    
             </div>
@@ -103,14 +105,18 @@ const Card = ({resource}) => {
                                 <MDBContainer key={index} className='w-sm-50 w-lg-50 mb-5 border'>
                                     <Bar data={data} />
                                 </MDBContainer>
-                                <button onClick={() => DeleteChart(inds[index])} className='btn btn-danger'>Delete</button>
+                                <button onClick={() => DeleteChart(inds[index])} 
+                                    className='btn btn-danger'>Delete
+                                </button>
                                
                             </div>
                         ))} 
                            
                     </div>
                     <Link to='/drucker'>
-                        <button className='btn btn-primary mt-5' type='button'>Add Printer</button>
+                        <button className='btn btn-primary mt-5' type='button'>
+                            Add Printer
+                        </button>
                     </Link>
                      
                 </div>

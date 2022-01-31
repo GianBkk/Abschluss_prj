@@ -30,7 +30,12 @@ const Printer = () => {
             <form className=' mt-2 p-5' onSubmit={postData}>
             <div className='form-group w-50 text-start ' >
                 <label for='printerNameInput'>Drucker Name:</label>
-                <input type='text' value={name} className='form-control' id='printerNameInput' aria-describedby='printerAddHelp' placeholder='Input Name ...' onChange={(e) => setName(e.target.value)}/>
+                <input type='text' value={name} 
+                    className='form-control' 
+                    id='printerNameInput' 
+                    aria-describedby='printerAddHelp' 
+                    placeholder='Input Name ...' 
+                    onChange={(e) => setName(e.target.value)}/>
             </div>
             <div className='form-group w-50 text-start ' >
                 <label for='printerNameInput'>Drucker IP:</label>

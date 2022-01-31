@@ -80,7 +80,7 @@ export class DataService {
 
             let session = new snmp.Session({ host: element.ip, port: 161, community: 'public' });
         
-            session.getAll({oids : SwitchMib} , function(error, varbinds,) {
+            session.getAll({oids : Mib} , function(error, varbinds,) {
                 let drawer1 = varbinds[0].value;
                 let drawer2 = varbinds[1].value;
                 let lcf1 = varbinds[2].value;
