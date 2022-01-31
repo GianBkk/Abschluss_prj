@@ -101,8 +101,8 @@ const Card = ({resource}) => {
                 <div className='row text-center'>
                     <div className='d-sm-flex d-flex flex-wrap' >
                         {data.map((data, index) => (
-                            <div className='w-100 h-100 position-relative text-end' >
-                                <MDBContainer key={index} className='w-sm-50 w-lg-50 mb-5 border'>
+                            <div className='w-100 text-end' >
+                                <MDBContainer key={index} className='mb-5 border'>
                                     <Bar data={data} />
                                 </MDBContainer>
                                 <button onClick={() => DeleteChart(inds[index])} 
