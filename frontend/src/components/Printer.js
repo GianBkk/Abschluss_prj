@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
-const address = require('address')
 const Printer = () => {
     const [name,setName] = useState();
     const [ip, setIp] = useState();
     const [model, setModel] = useState();
     const [pending, setPending] = useState(false);
     const hist = useNavigate();
-    const host = address.ip();
     const postData = (e) => {
         e.preventDefault();
         setPending(true)
-        axios.post(`http://${host}:8000/printer`, {
+        axios.post(`http://192.168.0.14:8000/printer`, {
             name,
             ip,
             model
