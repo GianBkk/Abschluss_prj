@@ -8,10 +8,11 @@ const Printer = () => {
     const [model, setModel] = useState();
     const [pending, setPending] = useState(false);
     const hist = useNavigate();
+    const host = address.ip();
     const postData = (e) => {
         e.preventDefault();
         setPending(true)
-        axios.post('http://api:8000/printer', {
+        axios.post(`http://${host}:8000/printer`, {
             name,
             ip,
             model
@@ -23,7 +24,7 @@ const Printer = () => {
         
     }
 
-    console.log(address.ip());
+    
   return (
     <div className='container-fluid' align='center'>
 
