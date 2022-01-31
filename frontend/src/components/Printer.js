@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
+const address = require('address')
 const Printer = () => {
     const [name,setName] = useState();
     const [ip, setIp] = useState();
@@ -22,7 +23,7 @@ const Printer = () => {
         
     }
 
-
+    console.log(address.ip());
   return (
     <div className='container-fluid' align='center'>
 
