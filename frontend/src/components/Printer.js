@@ -29,7 +29,7 @@ const Printer = () => {
         {pending ? (<h1>Loading...</h1>) : (
             <form className=' mt-2 p-5' onSubmit={postData}>
             <div className='form-group w-50 text-start ' >
-                <label for='printerNameInput'>Drucker Name:</label>
+                <label for='printerNameInput'>Drucker-Name:</label>
                 <input type='text' value={name} 
                     className='form-control' 
                     id='printerNameInput' 
@@ -38,11 +38,11 @@ const Printer = () => {
                     onChange={(e) => setName(e.target.value)}/>
             </div>
             <div className='form-group w-50 text-start ' >
-                <label for='printerNameInput'>Drucker IP:</label>
+                <label for='printerNameInput'>Drucker-IP:</label>
                 <input type='text' value={ip} className='form-control' id='printerNameInput' aria-describedby='printerAddHelp' placeholder='Input IP ...' onChange={(e) => setIp(e.target.value)}/>
             </div>
             <div className='form-group w-50 text-start ' >
-                <label for='printerNameInput'>Drucker Modell:</label>
+                <label for='printerNameInput'>Drucker-Modell:</label>
                 <input type='text' value={model} className='form-control' id='printerNameInput' aria-describedby='printerAddHelp' placeholder='Input Model ...' onChange={(e) => setModel(e.target.value)}/>
             </div>
             <button type="submit" class="btn btn-primary">Add Printer</button>
