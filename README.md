@@ -15,9 +15,12 @@ https://www.heise.de/tipps-tricks/Raspberry-Pi-einrichten-so-klappt-s-4169757.ht
 - Setze die rechte für Docker
 ´sudo usermod -aG docker [user_name]´
 - Installiere Python da das docker-compose benötigt
-´sudo apt-get install libffi-dev libssl-dev
+
+
+```sudo apt-get install libffi-dev libssl-dev
 sudo apt install python3-dev
-sudo apt-get install -y python3 python3-pip´
+sudo apt-get install -y python3 python3-pip
+```
 - Installiere mittels pip docker-compose
 `sudo pip3 install docker-compose`
 
