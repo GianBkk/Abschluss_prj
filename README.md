@@ -24,7 +24,7 @@ sudo apt-get install -y python3 python3-pip´
 
 ### Hole den Code mit git
 - Clone den Code
-´git clone {github-link}´
+´´´git clone {github-link}´´´
 - Pull den Code
 Wenn man informationen am Code ändert möchte man den neusten stand haben
 ´git pull origin´
