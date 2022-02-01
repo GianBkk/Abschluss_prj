@@ -19,12 +19,13 @@ https://www.heise.de/tipps-tricks/Raspberry-Pi-einrichten-so-klappt-s-4169757.ht
 sudo apt install python3-dev
 sudo apt-get install -y python3 python3-pip´
 - Installiere mittels pip docker-compose
+
 ´sudo pip3 install docker-compose´
 
 
 ### Hole den Code mit git
 - Clone den Code
-´´´git clone {github-link}´´´
+´git clone {github-link}´
 - Pull den Code
 Wenn man informationen am Code ändert möchte man den neusten stand haben
 ´git pull origin´
