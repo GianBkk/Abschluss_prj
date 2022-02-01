@@ -20,9 +20,9 @@ services:
     environment:
       - DB_TYPE=${DB_TYPE}
       - POSTGRES_HOST=${POSTGRES_HOST}
-      - POSTGRES_USER=${DATABASE_USER}
-      - POSTGRES_PASS=${DATABASE_PASSWORD}
-      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASS=${POSTGRES_PASS}
+      - POSTGRES_DB=${POSTGRES_DB}
       - API_PORT=${API_PORT}
     ports:
       - "8000:8000"
@@ -32,8 +32,8 @@ services:
     restart: always
     environment:
         - POSTGRES_USER=${DATABASE_USER}
-        - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
-        - POSTGRES_DB=${DB_NAME}
+        - POSTGRES_PASSWORD=${POSTGRES_PASS}
+        - POSTGRES_DB=${POSTGRES_DB}
     ports:
       - "5432:5432"
     volumes:
