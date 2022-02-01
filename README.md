@@ -33,9 +33,10 @@ Wenn man informationen am Code ändert möchte man den neusten stand haben
 `git pull origin`
 
 ### Führe alles aus
+`./scripts/start.sh`
 Um den Code auszuführen gibt es ein script was es Automatisch macht.
 Es startet die Applikationen und führt Migrationen aus.
-`./scripts/start.sh`
+
 
 
 
