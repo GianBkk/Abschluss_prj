@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const fetchData = () => {
     console.log('fetch Data...');
-    return axios.get('http://192.168.0.14:8000/data/printers')
+    return axios.get('http://10.101.4.119:8000/data/printers')
         .then(res => res.data)
         .catch(err => console.log(err))
 }

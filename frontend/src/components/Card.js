@@ -46,7 +46,7 @@ const Card = ({resource}) => {
 
     const DeleteChart = (ids) => {
         if(window.confirm('Are you sure you want to delete')){
-            axios.delete(`http://192.168.0.14:8000/printer/${inds[0]}`)
+            axios.delete(`http://10.101.4.119:8000/printer/${inds[0]}`)
         .then()
         .catch(err => console.log(err))
         }
