@@ -32,6 +32,22 @@ sudo apt-get install -y python3 python3-pip
 Wenn man informationen am Code ändert möchte man den neusten stand haben
 `git pull origin`
 
+### Configurieren der Enviorments
+- Stelle alle Enviorments richtig ein.
+```
+DB_TYPE=''
+POSTGRES_HOST=''
+POSTGRES_PORT=''
+DATABASE_USER=''
+DATABASE_PASSWORD=''
+DB_NAME=''
+POSTGRES_USER=''
+DB_USERNAME=''
+DB_PASSWORD=''
+API_PORT=''
+HOST_IP=''
+```
+
 ### Führe alles aus
 `./scripts/start.sh`
 Um den Code auszuführen gibt es ein script was es Automatisch macht.

@@ -10,7 +10,7 @@ const Printer = () => {
     const postData = (e) => {
         e.preventDefault();
         setPending(true)
-        axios.post(`http://10.101.4.119:8000/printer`, {
+        axios.post(`http://${process.env.HOST_IP}:8000/printer`, {
             name,
             ip,
             model
